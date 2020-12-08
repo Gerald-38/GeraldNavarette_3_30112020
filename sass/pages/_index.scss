@@ -1,0 +1,23 @@
+.localize{
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    font-size: 1.2rem;
+    position: relative;   
+    background-color: $back-colour-medium;
+    color: $colour-black;
+    border-top: .2rem solid  $back-colour-dark;
+    &__text {
+        font-weight: 600;
+    }
+    &__icon {
+      margin-right: 1rem;
+    }
+}
+
+.reserve {
+    background-color: $back-colour-clear;
+    padding: 1rem 1rem;
+    color: $colour-black;
+    text-align: center;
+}

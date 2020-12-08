@@ -1,0 +1,24 @@
+.footer{
+    background-color: $back-colour-darkest;
+    color: $colour-white;
+    padding: 1rem 1rem 1rem 1rem;
+    &__list {
+        padding: 0;
+    }
+    &__list-element {
+        list-style-type: none;
+        padding: .2rem;
+        &__text {
+            padding-left: 1rem;
+        }
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &__logo {
+        font-family: 'Shrikhand', sans-serif;
+    }
+    &__link {
+        color: $colour-white;
+    }
+}

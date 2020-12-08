@@ -1,0 +1,10 @@
+.fonctionn{
+    color: $colour-black;
+    &__step {
+        background-color: $back-colour-clear;
+        padding: 1rem;
+        margin-bottom: .5rem;
+        box-shadow: 5px 5px 2px $back-colour-medium;
+        border-radius: 10px;        
+    }
+}

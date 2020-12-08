@@ -1,0 +1,109 @@
+.container {
+  margin: 0 10% 0 10%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #9356DC;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  background-color: #FF79DA;
+  padding: 1rem 1rem;
+  border: 0px;
+  border-radius: 30px;
+  color: #ffff;
+}
+
+.header__logo {
+  color: #000;
+  text-align: center;
+}
+
+.card__img {
+  width: 40%;
+  height: 40%;
+}
+
+.fonctionn {
+  color: #000;
+}
+.fonctionn__step {
+  background-color: #F2F2F2;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 5px 5px 2px #e5e5e5;
+  border-radius: 10px;
+}
+
+.restaurants {
+  color: #000;
+  background-color: #F2F2F2;
+}
+
+.card {
+  color: #000;
+}
+
+.footer {
+  background-color: #404040;
+  color: #ffff;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.footer__list {
+  padding: 0;
+}
+.footer__list-element {
+  list-style-type: none;
+  padding: 0.2rem;
+}
+.footer__list-element__text {
+  padding-left: 1rem;
+}
+.footer__link {
+  text-decoration: none;
+}
+.footer__logo {
+  font-family: "Shrikhand", sans-serif;
+}
+.footer__link {
+  color: #ffff;
+}
+
+.localize {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  background-color: #e5e5e5;
+  color: #000;
+  border-top: 0.2rem solid #d9d9d9;
+}
+.localize__text {
+  font-weight: 600;
+}
+.localize__icon {
+  margin-right: 1rem;
+}
+
+.reserve {
+  background-color: #F2F2F2;
+  padding: 1rem 1rem;
+  color: #000;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
