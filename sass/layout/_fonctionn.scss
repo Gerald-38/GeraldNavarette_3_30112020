@@ -1,10 +1,40 @@
-.fonctionn{
-    color: $colour-black;
-    &__step {
-        background-color: $back-colour-clear;
-        padding: 1rem;
-        margin-bottom: .5rem;
-        box-shadow: 5px 5px 2px $back-colour-medium;
-        border-radius: 10px;        
+.fonctionn{   
+    &__icon{
+        margin: 0rem 2rem 0rem 1rem;
     }
+    color: $colour-black;
+    padding: .1rem 1rem .1rem 0rem;
+    &__steps  {
+        counter-reset: compteur;
+    }
+    &__steps {
+        padding: 1rem 2rem 1rem 1rem;
+        &__step {
+            display: flex;        
+            list-style-type: none;
+            counter-increment: compteur; /* on incrémente le compteur à chaque nouveau li */
+            margin-bottom: 10px;
+            background-color: $back-colour-clear;
+            padding: 2rem 1rem 2rem 1rem;
+            margin-bottom: 1rem;
+            width: 95%;
+            box-shadow: 3px 5px 10px 1px $back-colour-dark;   
+            border-radius: 15px;
+            &:before {
+                content: counter(compteur); 
+                background: $colour-primary;
+                height:1.5rem;
+                width: 1.5rem;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $colour-white;
+                position: absolute;
+                left: 3rem;
+            }               
+        }
+    }    
+
 }
+

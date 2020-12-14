@@ -1,7 +1,7 @@
 .localize{
     display: flex;
     justify-content: center;
-    padding: 1.25rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;   
     font-size: 1.2rem;
     position: relative;   
     background-color: $back-colour-medium;
@@ -17,7 +17,7 @@
 
 .reserve {
     background-color: $back-colour-clear;
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 4rem 1rem;
     color: $colour-black;
     text-align: center;
 }

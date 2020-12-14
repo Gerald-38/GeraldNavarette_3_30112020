@@ -1,8 +1,51 @@
-.restaurants {
-    color: $colour-black;
-    background-color: $back-colour-clear;
+a {
+    text-decoration: none;
 }
 
-.card {
-    color: $colour-black
-};
+.restaurants {
+    //border: 1px solid black;
+    color: $colour-black;
+    background-color: $back-colour-clear;
+    padding: 1rem 1rem 1rem 1rem;  
+}
+
+.card {    
+    height: 200px;
+    background-color: $colour-white;    
+    border-radius: 10px 10px 10px 10px;
+    padding: 0rem 0rem 2rem 0rem;
+    margin-bottom: 2rem; 
+    box-shadow: 3px 5px 10px 1px $back-colour-dark;    
+    &__img { 
+        margin: 0rem 0rem 0rem 0rem;       
+        width: 100%;
+        height: 50%;
+        border-radius: 10px 10px 0px 0px;;
+        //@at-root: absolute;
+        position: top;
+    }
+    &__label {
+        color: $back-colour-darkest;
+        position: relative;
+        left: 13rem;
+        bottom: 6rem;
+        background-color: $colour-tertiary;
+    }
+    &__desc {        
+        height: 70px;
+        position: relative;
+        top: 0rem;
+        margin: 0rem 0rem 0rem 0rem;  
+        padding: 0rem 0rem 1rem 0rem;
+        color: $colour-black;       
+        display: flex;
+        justify-content: space-between;
+        background-color: $colour-white;
+        &__content {
+            
+        }    
+    }
+}
+
+
+
