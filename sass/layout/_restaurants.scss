@@ -3,40 +3,41 @@ a {
 }
 
 .restaurants {
-    //border: 1px solid black;
     color: $colour-black;
     background-color: $back-colour-clear;
     padding: 1rem 1rem 1rem 1rem;  
 }
 
 .card {    
-    height: 200px;
+    height: 230px;
     background-color: $colour-white;    
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px;
     padding: 0rem 0rem 2rem 0rem;
-    margin-bottom: 2rem; 
+    margin-bottom: 1rem; 
     box-shadow: 3px 5px 10px 1px $back-colour-dark;    
     &__img { 
-        margin: 0rem 0rem 0rem 0rem;       
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0px;       
         width: 100%;
-        height: 50%;
-        border-radius: 10px 10px 0px 0px;;
+        height: 80%;
+        border-radius: 20px 20px 0px 0px;;
         //@at-root: absolute;
-        position: top;
+        position: bottom;
+        object-fit: cover;
     }
     &__label {
         color: $back-colour-darkest;
         position: relative;
-        left: 13rem;
-        bottom: 6rem;
+        right: -16rem;
+        top: -11rem;
         background-color: $colour-tertiary;
     }
     &__desc {        
-        height: 70px;
+        //height: 70px;
         position: relative;
         top: 0rem;
-        margin: 0rem 0rem 0rem 0rem;  
-        padding: 0rem 0rem 1rem 0rem;
+        margin: 0rem 1rem 0rem 1rem;  
+        //padding: 0rem 0rem 0rem 0rem;
         color: $colour-black;       
         display: flex;
         justify-content: space-between;

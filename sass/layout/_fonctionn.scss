@@ -1,25 +1,23 @@
-.fonctionn{   
-    &__icon{
-        margin: 0rem 2rem 0rem 1rem;
-    }
+.fonctionn{
+    //margin: 1rem 1rem 4rem 1rem;
+    padding: .1rem .5rem .1rem 1rem;      
     color: $colour-black;
-    padding: .1rem 1rem .1rem 0rem;
-    &__steps  {
-        counter-reset: compteur;
+    &__icon{
+        margin: 0rem 2rem 0rem 0rem;
     }
     &__steps {
+        counter-reset: compteur;
         padding: 1rem 2rem 1rem 1rem;
         &__step {
-            display: flex;        
-            list-style-type: none;
-            counter-increment: compteur; /* on incrémente le compteur à chaque nouveau li */
-            margin-bottom: 10px;
-            background-color: $back-colour-clear;
-            padding: 2rem 1rem 2rem 1rem;
-            margin-bottom: 1rem;
             width: 95%;
+            margin-bottom: 2rem;
+            padding: 2rem 1rem 2rem 1rem;            
+            display: flex;        
+            list-style-type: none;                        
+            counter-increment: compteur; /* on incrémente le compteur à chaque nouveau li */
+            background-color: $back-colour-clear;            
             box-shadow: 3px 5px 10px 1px $back-colour-dark;   
-            border-radius: 15px;
+            border-radius: 20px;
             &:before {
                 content: counter(compteur); 
                 background: $colour-primary;
@@ -30,8 +28,8 @@
                 justify-content: center;
                 align-items: center;
                 color: $colour-white;
-                position: absolute;
-                left: 3rem;
+                position: relative;
+                right: 1.8rem;
             }               
         }
     }    
