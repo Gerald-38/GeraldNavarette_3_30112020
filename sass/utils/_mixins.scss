@@ -1,20 +1,8 @@
 @mixin btn {
     background: linear-gradient(170deg, $colour-secondary,$colour-primary);
-    padding: 1rem 1rem;
+    padding: 1rem 3rem;
     border: 0px;
     border-radius: 30px;
     color: $colour-white;
     box-shadow: 3px 5px 5px 1px $back-colour-dark; 
-    // padding: $grid-gutter;
-    // @include border;
-    // color: $colour-primary;
-    // background: $colour-secondary;
-    // cursor: pointer;
-    // &:hover{
-    //     background: $colour-primary;
-    //     color: $colour-accent;
-    // }
-    // &--full-width {
-    //     width: 100%;
-    //     margin: 0 auto;
     }
