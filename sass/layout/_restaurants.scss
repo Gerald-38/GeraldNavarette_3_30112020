@@ -15,7 +15,11 @@ a {
     padding: 0rem 0rem 2rem 0rem;
     margin-bottom: 1rem; 
     box-shadow: 3px 5px 10px 1px $back-colour-dark; 
-    position: relative;   
+    position: relative;
+    transition-duration: 500ms;
+    &:hover {
+        box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
+    }   
     &__img {
         &:nth-of-type(2) {            
             object-position: 90% 10% ;
@@ -52,6 +56,29 @@ a {
         &__content {
             
         }    
+    }
+    &__like {
+        padding: 0;
+        margin: 0;                
+        position: relative;
+        z-index: 1;
+        &:hover {
+            &::after {
+                opacity: 1;
+            }                    
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $colour-secondary;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 500ms;
+        }
     }
 }
 

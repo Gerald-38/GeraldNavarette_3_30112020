@@ -1,8 +1,17 @@
 @mixin btn {
-    background: linear-gradient(170deg, $colour-secondary,$colour-primary);
-    padding: 1rem 3rem;
     border: 0px;
+    padding: 1rem 3rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     border-radius: 30px;
     color: $colour-white;
+    background-image: linear-gradient(170deg, $colour-secondary,$colour-primary);
     box-shadow: 3px 5px 5px 1px $back-colour-dark; 
+    cursor: pointer;
+    transition: all 500ms;
+    &:hover {
+        background-image: linear-gradient(170deg, $colour-secondary-clear,$colour-primary-clear);
+        box-shadow: 3px 5px 5px 1px darken($back-colour-dark, 25);
     }
+}
+

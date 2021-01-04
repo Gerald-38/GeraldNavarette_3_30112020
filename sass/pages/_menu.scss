@@ -45,21 +45,59 @@ body{
             display: flex;
             justify-content: space-between;
             &__icon {
-                padding: 1.5rem 0 0 .5rem;
+                padding: 1.5rem 0 0 .5rem;                
+                position: relative;
+                z-index: 1;
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }                    
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $colour-secondary;
+                    opacity: 0;
+                    z-index: -1;
+                    transition: opacity 500ms;
+                }
             }
         }
         &__order{
             margin: 0 0 3rem 0;
             &__type {
-            background-color: $colour-white;
-            border-radius: 15px;
-            padding: .5rem 0 0 .5rem;
-            box-shadow: 3px 5px 10px 1px $back-colour-dark;
+                background-color: $colour-white;
+                border-radius: 15px;
+                padding: .5rem 0 0 .5rem;
+                box-shadow: 3px 5px 10px 1px $back-colour-dark;
+                animation: types $anim-dur ease-in-out;
+                @for $i from 1 through $num-types {
+                    &--#{$i} {
+                        animation-delay: $anim-delay * $i;
+                }
+            }
+                &__validate {
+                    border-radius: 0 15px 15px 0;
+                    position: relative;
+                    right: 0rem; 
+                    width: 5rem;
+                    background-color: $colour-tertiary;
+                    & i {
+                        vertical-align: middle;
+                        position: absolute;
+                        right: 50%;
+                        top: 50%;
+                    }
+                }
                 &__desc {
-                    padding: 1rem 1rem 0 0;
+                    padding: 1rem 0rem 0 0;
                     display: flex;
                     justify-content: space-between;
-                    margin: 0 0 1rem 0;
+                    margin: 0 0 1rem 0;                    
                 }  
             }
         }
@@ -72,6 +110,17 @@ body{
             border: 1px solid black;
             width: 50%;
         }
+    }
+}
+
+@keyframes types {
+    0% {
+        transform: scaleX(0);
+        opacity: .5;
+    }    
+  
+    100% {
+        transform: scaleX(1);
     }
 }
 

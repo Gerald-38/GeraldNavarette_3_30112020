@@ -1,5 +1,7 @@
 $colour-primary: #9356DC;
+$colour-primary-clear: lighten($colour-primary, 4%);
 $colour-secondary: #FF79DA;
+$colour-secondary-clear: lighten($colour-secondary, 4%);
 $colour-tertiary: #99E2D0;
 $colour-black: #000;
 $colour-white: #ffff;
@@ -7,5 +9,9 @@ $back-colour-clear:#F2F2F2;
 $back-colour-medium: darken($back-colour-clear, 5%);
 $back-colour-dark: darken($back-colour-clear, 10%);
 $back-colour-darkest: darken($back-colour-clear, 70%);
+$num-types: 9;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-types;
+
 
 
