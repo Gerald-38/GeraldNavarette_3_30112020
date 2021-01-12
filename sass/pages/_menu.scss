@@ -2,9 +2,6 @@ body{
     color: $colour-black;
 }
 
-// .menuContainer {
-//     display: flex;
-// }
 
 .headerMenu {
     position: relative;
@@ -24,8 +21,7 @@ body{
 }
 
 .menu {
-    padding: 0 0 0 0;
-    //background-color: $back-colour-clear;    
+    padding: 0 0 0 0;   
     &__img {    
         width: 100%;
         height: 100%; 
@@ -44,61 +40,73 @@ body{
             color: $colour-black;       
             display: flex;
             justify-content: space-between;
-            &__icon {
-                padding: 1.5rem 0 0 .5rem;                
-                position: relative;
-                z-index: 1;
-                &:hover {
-                    &::after {
-                        opacity: 1;
-                    }                    
-                }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $colour-secondary;
-                    opacity: 0;
-                    z-index: -1;
-                    transition: opacity 500ms;
-                }
+            &__icon {                
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                top: 1.5rem;
+                right: 0;
+                bottom: 0;
+            }
+            &__icon__like {
+                padding: 0;
+                margin: 0;                
+                color: $colour-secondary;
+                position: absolute;
+                top: 1.5rem;
+                right: 0;
+                bottom: 0;
+                @include like;                
             }
         }
         &__order{
             margin: 0 0 3rem 0;
-            &__type {
+            &__type {                                               
+                margin: 0rem 0rem 1rem 0rem;
+                display: flex; 
+                justify-content: space-between;           
                 background-color: $colour-white;
                 border-radius: 15px;
-                padding: .5rem 0 0 .5rem;
+                padding: 0rem 0rem 0rem 1rem;
                 box-shadow: 3px 5px 10px 1px $back-colour-dark;
                 animation: types $anim-dur ease-in-out;
                 @for $i from 1 through $num-types {
                     &--#{$i} {
                         animation-delay: $anim-delay * $i;
+                    }
+                &:hover &__validate {                    
+                    transform: translate(-80px);
+                    opacity: 1;
+                    cursor: pointer;
+                    
                 }
-            }
+                }
                 &__validate {
+                    opacity: 0;
+                    transition: transform 300ms ease-in-out;               
+                    margin: 0rem -5rem 0rem 0rem;
                     border-radius: 0 15px 15px 0;
-                    position: relative;
-                    right: 0rem; 
                     width: 5rem;
                     background-color: $colour-tertiary;
                     & i {
-                        vertical-align: middle;
-                        position: absolute;
-                        right: 50%;
-                        top: 50%;
+                        font-size: 2rem;                      
+                        position: relative;
+                        right: -1.5rem;
+                        top: 25%;
                     }
+                }   
+                &__card {
+                    padding: 0px 0px 0px 0px;
                 }
-                &__desc {
-                    padding: 1rem 0rem 0 0;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0 0 1rem 0;                    
-                }  
+                &__price {                 
+                    padding: 1.5rem 0rem 0rem 0rem; 
+                    position: relative;
+                    //right : -3rem;                   
+                    //position: relative;
+                    //right: 0rem;
+                    //top: 1rem;
+                }        
+
             }
         }
     }

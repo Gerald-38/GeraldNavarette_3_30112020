@@ -156,25 +156,26 @@ a {
   justify-content: space-between;
   background-color: #ffff;
 }
-.card__like {
+.card__like:hover {
+  color: #FF79DA;
+}
+.card__like__off:hover {
+  color: #FF79DA;
+}
+.card__like__on {
   padding: 0;
   margin: 0;
-  position: relative;
-  z-index: 1;
-}
-.card__like:hover::after {
-  opacity: 1;
-}
-.card__like::after {
-  content: "";
+  color: #FF79DA;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  background-color: #FF79DA;
   opacity: 0;
-  z-index: -1;
+  opacity: 0;
+  z-index: 1;
+}
+.card__like__on:hover {
+  opacity: 1;
   transition: opacity 500ms;
 }
 
@@ -272,80 +273,133 @@ body {
   justify-content: space-between;
 }
 .menu__content__rest__icon {
-  padding: 1.5rem 0 0 0.5rem;
-  position: relative;
-  z-index: 1;
-}
-.menu__content__rest__icon:hover::after {
-  opacity: 1;
-}
-.menu__content__rest__icon::after {
-  content: "";
+  padding: 0;
+  margin: 0;
   position: absolute;
-  top: 0;
+  top: 1.5rem;
   right: 0;
   bottom: 0;
-  left: 0;
-  background-color: #FF79DA;
+}
+.menu__content__rest__icon__like {
+  padding: 0;
+  margin: 0;
+  color: #FF79DA;
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  bottom: 0;
   opacity: 0;
-  z-index: -1;
+  z-index: 1;
+}
+.menu__content__rest__icon__like:hover {
+  opacity: 1;
   transition: opacity 500ms;
 }
 .menu__content__order {
   margin: 0 0 3rem 0;
 }
 .menu__content__order__type {
+  margin: 0rem 0rem 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
   background-color: #ffff;
   border-radius: 15px;
-  padding: 0.5rem 0 0 0.5rem;
+  padding: 0rem 0rem 0rem 1rem;
   box-shadow: 3px 5px 10px 1px #d9d9d9;
   animation: types 1000ms ease-in-out;
 }
 .menu__content__order__type--1 {
   animation-delay: 111.1111111111ms;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--2 {
   animation-delay: 222.2222222222ms;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
 }
 .menu__content__order__type--3 {
   animation-delay: 333.3333333333ms;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--4 {
   animation-delay: 444.4444444444ms;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
 }
 .menu__content__order__type--5 {
   animation-delay: 555.5555555556ms;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--6 {
   animation-delay: 666.6666666667ms;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
 }
 .menu__content__order__type--7 {
   animation-delay: 777.7777777778ms;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--8 {
   animation-delay: 888.8888888889ms;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
 }
 .menu__content__order__type--9 {
   animation-delay: 1000ms;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type__validate {
+  opacity: 0;
+  transition: transform 300ms ease-in-out;
+  margin: 0rem -5rem 0rem 0rem;
   border-radius: 0 15px 15px 0;
-  position: relative;
-  right: 0rem;
   width: 5rem;
   background-color: #99E2D0;
 }
 .menu__content__order__type__validate i {
-  vertical-align: middle;
-  position: absolute;
-  right: 50%;
-  top: 50%;
+  font-size: 2rem;
+  position: relative;
+  right: -1.5rem;
+  top: 25%;
 }
-.menu__content__order__type__desc {
-  padding: 1rem 0rem 0 0;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 1rem 0;
+.menu__content__order__type__card {
+  padding: 0px 0px 0px 0px;
+}
+.menu__content__order__type__price {
+  padding: 1.5rem 0rem 0rem 0rem;
+  position: relative;
 }
 .menu__wrapper {
   margin: 5rem 0 0 0;

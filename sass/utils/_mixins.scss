@@ -15,3 +15,11 @@
     }
 }
 
+@mixin like {
+    opacity: 0;
+    z-index: 1;
+    &:hover {
+        opacity: 1; 
+        transition: opacity 500ms;    
+    }
+}
