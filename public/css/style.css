@@ -1,4 +1,46 @@
 @charset "UTF-8";
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(223, 197, 197, 0.9);
+  animation: loader 1000ms;
+  animation-delay: 1500ms;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__bar {
+  height: 1rem;
+  width: 10rem;
+  border-radius: 1rem;
+  background-color: #9356DC;
+  animation: progress-bar 2000ms;
+}
+.loader__barContainer {
+  display: flex;
+  width: 10rem;
+  justify-content: space-between;
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 body {
   margin: 0px;
 }
@@ -244,7 +286,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
   font-size: 1.2rem;
   color: black;
 }
@@ -299,6 +340,7 @@ body {
   margin: 0 0 3rem 0;
 }
 .menu__content__order__type {
+  opacity: 0;
   margin: 0rem 0rem 1rem 0rem;
   display: flex;
   justify-content: space-between;
@@ -306,12 +348,21 @@ body {
   border-radius: 15px;
   padding: 0rem 0rem 0rem 1rem;
   box-shadow: 3px 5px 10px 1px #d9d9d9;
-  animation: types 1000ms ease-in-out;
+  overflow: hidden;
+  animation: 400ms types 1000ms ease-in forwards;
 }
 .menu__content__order__type--1 {
   animation-delay: 111.1111111111ms;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
   cursor: pointer;
@@ -324,10 +375,26 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--3 {
   animation-delay: 333.3333333333ms;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
   cursor: pointer;
@@ -340,10 +407,26 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--5 {
   animation-delay: 555.5555555556ms;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
   cursor: pointer;
@@ -356,10 +439,26 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--7 {
   animation-delay: 777.7777777778ms;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
   cursor: pointer;
@@ -372,10 +471,26 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
 .menu__content__order__type--9 {
   animation-delay: 1000ms;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
+  transform: translate(-80px);
+  opacity: 1;
+  cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__validate i {
+  transform: rotate(0deg);
+}
+.menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
   cursor: pointer;
@@ -389,6 +504,9 @@ body {
   background-color: #99E2D0;
 }
 .menu__content__order__type__validate i {
+  transform: rotate(180deg);
+  transition-duration: 300ms;
+  transition: transform 300ms ease-in-out;
   font-size: 2rem;
   position: relative;
   right: -1.5rem;
@@ -396,10 +514,25 @@ body {
 }
 .menu__content__order__type__card {
   padding: 0px 0px 0px 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__content__order__type__card__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__content__order__type__card__text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__content__order__type__price {
   padding: 1.5rem 0rem 0rem 0rem;
-  position: relative;
+  position: absolute;
+  right: 2rem;
+  transition: transform 300ms ease-in-out;
 }
 .menu__wrapper {
   margin: 5rem 0 0 0;
@@ -413,11 +546,18 @@ body {
 
 @keyframes types {
   0% {
-    transform: scaleX(0);
-    opacity: 0.5;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+  90% {
+    transform: scale(0.9);
   }
   100% {
-    transform: scaleX(1);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

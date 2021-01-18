@@ -1,0 +1,45 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(223, 197, 197, 0.9);
+    animation: loader 1000ms;
+    animation-delay: 1500ms;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  
+    &__bar {        
+      height: 1rem;
+      width: 10rem;
+      border-radius: 1rem;
+      background-color: $colour-primary;
+      animation: progress-bar 2000ms;      
+      &Container {
+        display: flex;
+        width: 10rem;
+        justify-content: space-between;
+      }      
+    }
+}
+
+@keyframes loader{
+    100% { 
+        opacity: 0; 
+        z-index: -10;
+    }
+}
+  
+@keyframes progress-bar {
+    0% {
+        transform: scaleX(0);
+    }    
+    100% {
+        transform: scaleX(1);
+    }
+}
+  

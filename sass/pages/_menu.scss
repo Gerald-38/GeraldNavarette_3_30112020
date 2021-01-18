@@ -14,7 +14,7 @@ body{
         display:flex;
         align-items:center;
         justify-content:center;
-        transform: translateY(-50%);
+        //<transform: translateY(-50%);
         font-size: 1.2rem;
         color: black;
     }
@@ -61,7 +61,8 @@ body{
         }
         &__order{
             margin: 0 0 3rem 0;
-            &__type {                                               
+            &__type {
+                opacity: 0;                                               
                 margin: 0rem 0rem 1rem 0rem;
                 display: flex; 
                 justify-content: space-between;           
@@ -69,7 +70,10 @@ body{
                 border-radius: 15px;
                 padding: 0rem 0rem 0rem 1rem;
                 box-shadow: 3px 5px 10px 1px $back-colour-dark;
-                animation: types $anim-dur ease-in-out;
+                overflow: hidden;
+                animation: 400ms types $anim-dur ease-in forwards;
+                //animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+                //animation-fill-mode: both;
                 @for $i from 1 through $num-types {
                     &--#{$i} {
                         animation-delay: $anim-delay * $i;
@@ -77,11 +81,19 @@ body{
                 &:hover &__validate {                    
                     transform: translate(-80px);
                     opacity: 1;
-                    cursor: pointer;
-                    
+                    cursor: pointer;                    
+                }
+                &:hover &__validate i {
+                    transform: rotate(0deg);
+                }
+                &:hover &__price {                    
+                    transform: translate(-80px);
+                    opacity: 1;
+                    cursor: pointer;                    
                 }
                 }
                 &__validate {
+                    //display: none;
                     opacity: 0;
                     transition: transform 300ms ease-in-out;               
                     margin: 0rem -5rem 0rem 0rem;
@@ -89,6 +101,9 @@ body{
                     width: 5rem;
                     background-color: $colour-tertiary;
                     & i {
+                        transform: rotate(180deg);
+                        transition-duration: 300ms;                                                
+                        transition: transform 300ms ease-in-out;
                         font-size: 2rem;                      
                         position: relative;
                         right: -1.5rem;
@@ -97,11 +112,26 @@ body{
                 }   
                 &__card {
                     padding: 0px 0px 0px 0px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    &__name {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    &__text {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;  
+                    }
                 }
                 &__price {                 
                     padding: 1.5rem 0rem 0rem 0rem; 
-                    position: relative;
-                    //right : -3rem;                   
+                    position: absolute;
+                    right: 2rem;
+                    transition: transform 300ms ease-in-out;
+                   // right : 1rem;                   
                     //position: relative;
                     //right: 0rem;
                     //top: 1rem;
@@ -123,14 +153,33 @@ body{
 
 @keyframes types {
     0% {
-        transform: scaleX(0);
-        opacity: .5;
+        opacity: 0;
+        transform: scale(0.3);
     }    
   
+    60% {
+        transform: scale(1.4);
+    }
+
+    90% {
+        transform: scale(0.9);
+    }
+
     100% {
-        transform: scaleX(1);
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
+
+//  {
+//     transform: scaleX(0);
+//     opacity: .5;
+// }    
+
+// 100% {
+//     transform: scaleX(1);
+// }
+// }
 
 
