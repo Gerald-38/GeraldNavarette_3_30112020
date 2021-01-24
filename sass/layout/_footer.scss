@@ -1,4 +1,7 @@
 .footer{
+    @media (min-width: 1366px) {
+        text-align: center;
+    }
     background-color: $back-colour-darkest;
     color: $colour-white;
     padding: 1rem 1rem 1rem 1rem;

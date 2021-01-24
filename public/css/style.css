@@ -112,12 +112,22 @@ button {
   padding: 0.1rem 0.5rem 0.1rem 1rem;
   color: #000;
 }
+@media (min-width: 1366px) {
+  .fonctionn {
+    text-align: center;
+  }
+}
 .fonctionn__icon {
   margin: 0rem 2rem 0rem 0rem;
 }
 .fonctionn__steps {
   counter-reset: compteur;
   padding: 1rem 2rem 1rem 1rem;
+}
+@media (min-width: 1366px) {
+  .fonctionn__steps {
+    display: flex;
+  }
 }
 .fonctionn__steps__step {
   width: 95%;
@@ -130,6 +140,11 @@ button {
   background-color: #F2F2F2;
   box-shadow: 3px 5px 10px 1px #d9d9d9;
   border-radius: 20px;
+}
+@media (min-width: 1366px) {
+  .fonctionn__steps__step {
+    margin: 0 1rem 2rem 1rem;
+  }
 }
 .fonctionn__steps__step:before {
   content: counter(compteur);
@@ -153,6 +168,27 @@ a {
   color: #000;
   background-color: #F2F2F2;
   padding: 1rem 1rem 1rem 1rem;
+}
+@media (min-width: 1366px) {
+  .restaurants {
+    text-align: center;
+  }
+}
+@media (min-width: 1366px) {
+  .restaurants__container {
+    text-align: left;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+  }
+}
+@media (min-width: 1366px) {
+  .restaurants a {
+    width: 36rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .card {
@@ -226,6 +262,11 @@ a {
   color: #ffff;
   padding: 1rem 1rem 1rem 1rem;
 }
+@media (min-width: 1366px) {
+  .footer {
+    text-align: center;
+  }
+}
 .footer__list {
   padding: 0;
 }
@@ -297,6 +338,11 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (min-width: 1366px) {
+  .menu__img {
+    height: 10%;
+  }
+}
 .menu__content {
   background-color: #F2F2F2;
   z-index: 1;
@@ -306,12 +352,27 @@ body {
   position: relative;
   top: -5rem;
 }
+@media (min-width: 1366px) {
+  .menu__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    top: -50rem;
+  }
+}
 .menu__content__rest {
   position: relative;
   margin: 0rem 1rem 0rem 1rem;
   color: #000;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 1366px) {
+  .menu__content__rest {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 .menu__content__rest__icon {
   padding: 0;
@@ -354,159 +415,167 @@ body {
 .menu__content__order__type--1 {
   animation-delay: 111.1111111111ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--2 {
   animation-delay: 222.2222222222ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--3 {
   animation-delay: 333.3333333333ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--4 {
   animation-delay: 444.4444444444ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--5 {
   animation-delay: 555.5555555556ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--6 {
   animation-delay: 666.6666666667ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--7 {
   animation-delay: 777.7777777778ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--8 {
   animation-delay: 888.8888888889ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type--9 {
   animation-delay: 1000ms;
 }
+.menu__content__order__type:hover {
+  cursor: pointer;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate i {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu__content__order__type:hover .menu__content__order__type__price {
   transform: translate(-80px);
   opacity: 1;
-  cursor: pointer;
 }
 .menu__content__order__type__validate {
   opacity: 0;
-  transition: transform 300ms ease-in-out;
+  transition: transform 400ms ease-in-out;
   margin: 0rem -5rem 0rem 0rem;
   border-radius: 0 15px 15px 0;
   width: 5rem;
   background-color: #99E2D0;
+  animation: 400ms validator 1000ms ease-in forwards;
 }
 .menu__content__order__type__validate i {
-  transform: rotate(180deg);
-  transition-duration: 300ms;
-  transition: transform 300ms ease-in-out;
+  transition: transform 400ms ease-in-out;
   font-size: 2rem;
   position: relative;
   right: -1.5rem;
@@ -517,6 +586,10 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  transition: transform 400ms ease-in-out;
+}
+.menu__content__order__type__card:hover {
+  width: 60%;
 }
 .menu__content__order__type__card__name {
   white-space: nowrap;
@@ -558,6 +631,32 @@ body {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes validator {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 5rem;
+    opacity: 1;
+  }
+}
+@media (min-width: 1366px) {
+  .order__entrees {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .order__plats {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .order__desserts {
+    grid-column: 3;
+    grid-row: 2;
   }
 }
 
