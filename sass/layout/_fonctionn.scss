@@ -13,6 +13,8 @@
         padding: 1rem 2rem 1rem 1rem;
         @media (min-width: 1366px) {
             display: flex;
+            width: 65%;
+            margin: 0 auto;
         }
         &__step {
             width: 95%;

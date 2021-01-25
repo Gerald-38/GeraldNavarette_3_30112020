@@ -6,8 +6,8 @@
   left: 0;
   top: 0;
   background-color: rgba(223, 197, 197, 0.9);
-  animation: loader 1000ms;
-  animation-delay: 1500ms;
+  animation: loader 2000ms;
+  animation-delay: 2000ms;
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
@@ -17,11 +17,12 @@
 .loader__bar {
   height: 1rem;
   width: 10rem;
-  border-radius: 1rem;
   background-color: #9356DC;
-  animation: progress-bar 2000ms;
+  animation: progress-bar 1500ms;
+  transform-origin: 0% 50%;
 }
 .loader__barContainer {
+  border: 1px solid black;
   display: flex;
   width: 10rem;
   justify-content: space-between;
@@ -127,6 +128,8 @@ button {
 @media (min-width: 1366px) {
   .fonctionn__steps {
     display: flex;
+    width: 65%;
+    margin: 0 auto;
   }
 }
 .fonctionn__steps__step {
@@ -340,7 +343,8 @@ body {
 }
 @media (min-width: 1366px) {
   .menu__img {
-    height: 10%;
+    height: 30rem;
+    object-fit: cover;
   }
 }
 .menu__content {
@@ -354,16 +358,18 @@ body {
 }
 @media (min-width: 1366px) {
   .menu__content {
+    margin: 0 auto -4rem auto;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    top: -50rem;
+    top: -4rem;
   }
 }
 .menu__content__rest {
   position: relative;
-  margin: 0rem 1rem 0rem 1rem;
+  margin: 0rem 1rem 0rem 0rem;
   color: #000;
   display: flex;
   justify-content: space-between;
@@ -418,6 +424,9 @@ body {
 .menu__content__order__type:hover {
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
@@ -434,6 +443,9 @@ body {
 }
 .menu__content__order__type:hover {
   cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
@@ -452,6 +464,9 @@ body {
 .menu__content__order__type:hover {
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
@@ -468,6 +483,9 @@ body {
 }
 .menu__content__order__type:hover {
   cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
@@ -486,6 +504,9 @@ body {
 .menu__content__order__type:hover {
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
@@ -502,6 +523,9 @@ body {
 }
 .menu__content__order__type:hover {
   cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
@@ -520,6 +544,9 @@ body {
 .menu__content__order__type:hover {
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
@@ -537,6 +564,9 @@ body {
 .menu__content__order__type:hover {
   cursor: pointer;
 }
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
+}
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
   opacity: 1;
@@ -553,6 +583,9 @@ body {
 }
 .menu__content__order__type:hover {
   cursor: pointer;
+}
+.menu__content__order__type:hover .menu__content__order__type__card {
+  animation: 200ms reducetext ease-in forwards;
 }
 .menu__content__order__type:hover .menu__content__order__type__validate {
   transform: translate(-80px);
@@ -582,14 +615,15 @@ body {
   top: 25%;
 }
 .menu__content__order__type__card {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding: 0px 0px 0px 0px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: transform 400ms ease-in-out;
-}
-.menu__content__order__type__card:hover {
-  width: 60%;
+  transition: transform 250ms ease-in-out;
 }
 .menu__content__order__type__card__name {
   white-space: nowrap;
@@ -607,13 +641,18 @@ body {
   right: 2rem;
   transition: transform 300ms ease-in-out;
 }
-.menu__wrapper {
+.menu__content__wrapper {
   margin: 5rem 0 0 0;
   display: flex;
   justify-content: space-around;
 }
-.menu__wrapper__button {
-  border: 1px solid black;
+@media (min-width: 1366px) {
+  .menu__content__wrapper {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+.menu__content__wrapper__button {
   width: 50%;
 }
 
@@ -641,6 +680,14 @@ body {
   100% {
     width: 5rem;
     opacity: 1;
+  }
+}
+@keyframes reducetext {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 60%;
   }
 }
 @media (min-width: 1366px) {

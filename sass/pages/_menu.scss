@@ -20,24 +20,30 @@ body{
     }
 }
 
-.menu {
-    padding: 0 0 0 0;   
+.menu {    
+    padding: 0 0 0 0;
+    &__wrapper {
+      // margin: 0 0 -5rem 0;
+    }  
     &__img { 
         @media (min-width: 1366px) {
-            height: 10%;
+            height: 30rem;
+            object-fit: cover;
         } 
         width: 100%;
         height: 100%; 
     }
     &__content{
         @media (min-width: 1366px) {
+            margin: 0 auto -4rem auto;
+            width: 90%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 10px;
             grid-auto-rows: minmax(100px, auto);
-            top: -50rem;
+            top: -4rem;
         }
-        background-color: $back-colour-clear;
+        background-color: $back-colour-clear;        
         z-index: 1;
         padding: .5rem 1rem 5em 1rem;
         margin: 0 0 -5rem 0;
@@ -47,10 +53,10 @@ body{
         &__rest{
             @media (min-width: 1366px) {
                 grid-column: 1;
-                grid-row: 1;
+                grid-row: 1;                
             }
             position: relative;
-            margin: 0rem 1rem 0rem 1rem;  
+            margin: 0rem 1rem 0rem 0rem;  
             color: $colour-black;       
             display: flex;
             justify-content: space-between;
@@ -95,6 +101,10 @@ body{
                 &:hover {
                     cursor: pointer;
                 }
+                &:hover &__card{
+                    //width: 60%;
+                    animation: 200ms reducetext ease-in forwards;
+                }
                 &:hover &__validate {                    
                     transform: translate(-80px);
                     opacity: 1;
@@ -128,18 +138,24 @@ body{
                     }
                 }   
                 &__card {
+                    width: 100%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     padding: 0px 0px 0px 0px;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    transition: transform 400ms ease-in-out;
-                    &:hover{
-                        width: 60%;
-                    }
+                    transition: transform 250ms ease-in-out;
+                    //animation: 400ms reducetext ease-in forwards;
+                    // animation: 400ms reducetext ease-in forwards;
+                    // &:hover{
+                    //     width: 60%;
+                    // }
                     &__name {
                         white-space: nowrap;
                         text-overflow: ellipsis;
-                        overflow: hidden;
+                        overflow: hidden;                        
                     }
                     &__text {
                         white-space: nowrap;
@@ -160,16 +176,20 @@ body{
 
             }
         }
-    }
-    &__wrapper {
-        margin: 5rem 0 0 0;
-        display: flex;
-        justify-content: space-around;
-        &__button {
-            border: 1px solid black;
-            width: 50%;
+        &__wrapper {
+            @media (min-width: 1366px) {
+                grid-column: 2;
+                grid-row: 3;
+            }
+            margin: 5rem 0 0 0;
+            display: flex;
+            justify-content: space-around;
+            &__button {
+                width: 50%;
+            }
         }
     }
+    
 }
 
 @keyframes types {
@@ -202,6 +222,15 @@ body{
         width: 5rem;
         opacity: 1;
 
+    }
+}
+
+@keyframes reducetext {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 60%;
     }
 }
 
