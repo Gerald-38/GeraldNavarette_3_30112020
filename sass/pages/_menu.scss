@@ -102,8 +102,7 @@ body{
                     cursor: pointer;
                 }
                 &:hover &__card{
-                    //width: 60%;
-                    animation: 200ms reducetext ease-in forwards;
+                    width: 60%;
                 }
                 &:hover &__validate {                    
                     transform: translate(-80px);
@@ -127,7 +126,7 @@ body{
                     border-radius: 0 15px 15px 0;
                     width: 5rem;
                     background-color: $colour-tertiary;
-                    animation: 400ms validator $anim-dur ease-in forwards;
+                    animation: 200ms validator $anim-dur ease-in forwards;
                     & i {
                         //transition-duration: 300ms;                                                
                         transition: transform 400ms ease-in-out;
@@ -146,12 +145,7 @@ body{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    transition: transform 250ms ease-in-out;
-                    //animation: 400ms reducetext ease-in forwards;
-                    // animation: 400ms reducetext ease-in forwards;
-                    // &:hover{
-                    //     width: 60%;
-                    // }
+                    transition: width 400ms;
                     &__name {
                         white-space: nowrap;
                         text-overflow: ellipsis;
@@ -224,16 +218,6 @@ body{
 
     }
 }
-
-@keyframes reducetext {
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 60%;
-    }
-}
-
 
 @media (min-width: 1366px) {
     .order__entrees {

@@ -11,8 +11,7 @@
     z-index: 10000;
     display:flex;
     align-items:center;
-    justify-content:center;
-  
+    justify-content:center;  
     &__bar {               
       height: 1rem;
       width: 10rem;
@@ -26,6 +25,16 @@
         width: 10rem;
         justify-content: space-between;
       }      
+    }
+    &__text {      
+        text-align: center;
+        margin-bottom: 6rem;        
+        & p {
+            animation: text-zoom 1500ms;
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 2rem;
+            color: $colour-black;
+        }
     }
 }
 
@@ -43,5 +52,19 @@
     100% {
         transform: scaleX(1);
     }
+}
+
+@keyframes text-zoom {
+    0% {
+        opacity: 0;
+    }    
+
+    50%{
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
 }
   
