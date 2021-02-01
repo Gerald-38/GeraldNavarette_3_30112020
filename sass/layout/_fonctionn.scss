@@ -13,7 +13,7 @@
         padding: 1rem 2rem 1rem 1rem;
         @media (min-width: 1366px) {
             display: flex;
-            width: 65%;
+            width: 70%;
             margin: 0 auto;
         }
         &__step {
@@ -26,6 +26,16 @@
             background-color: $back-colour-clear;            
             box-shadow: 3px 5px 10px 1px $back-colour-dark;   
             border-radius: 20px;
+            transition-duration: 500ms; 
+            &:nth-child(3) {
+                & i {
+                    color: $colour-primary;
+                }
+            }
+        
+            &:hover {
+                box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
+            } 
             @media (min-width: 1366px) {
                 margin: 0 1rem 2rem 1rem;
             }           
