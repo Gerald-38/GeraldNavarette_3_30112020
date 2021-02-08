@@ -1,9 +1,9 @@
 .fonctionn{
-    @media (min-width: 1366px) {
+    @media (min-width: 1300px) {
         text-align: center;
     }
     //margin: 1rem 1rem 4rem 1rem;
-    padding: .1rem .5rem .1rem 1rem;      
+    //padding: .1rem .5rem .1rem 1rem;      
     color: $colour-black;
     &__icon{
         margin: 0rem 2rem 0rem 0rem;
@@ -11,7 +11,7 @@
     &__steps {
         counter-reset: compteur;
         padding: 1rem 2rem 1rem 1rem;
-        @media (min-width: 1366px) {
+        @media (min-width: 1300px) {
             display: flex;
             width: 70%;
             margin: 0 auto;
@@ -36,7 +36,7 @@
             &:hover {
                 box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
             } 
-            @media (min-width: 1366px) {
+            @media (min-width: 1300px) {
                 margin: 0 1rem 2rem 1rem;
             }           
 
@@ -58,7 +58,7 @@
 
 }
 
-// @media (min-width: 1366px) 
+// @media (min-width: 1300px) 
 // {
 //     .fonctionn__steps {
 //         display: flex;

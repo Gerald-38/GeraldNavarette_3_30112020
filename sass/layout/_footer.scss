@@ -1,5 +1,5 @@
 .footer{
-    @media (min-width: 1366px) {
+    @media (min-width: 1300px) {
         text-align: center;
     }
     background-color: $back-colour-darkest;
@@ -23,5 +23,8 @@
     }
     &__link {
         color: $colour-white;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

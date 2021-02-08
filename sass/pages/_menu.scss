@@ -26,7 +26,7 @@ body{
       // margin: 0 0 -5rem 0;
     }  
     &__img { 
-        @media (min-width: 1366px) {
+        @media (min-width: 1300px) {
             height: 30rem;
             object-fit: cover;
         } 
@@ -39,7 +39,7 @@ body{
         object-fit: cover;
     }
     &__content{
-        @media (min-width: 1366px) {
+        @media (min-width: 1300px) {
             margin: 0 auto -4rem auto;
             width: 85%;
             display: grid;
@@ -56,7 +56,7 @@ body{
         position: relative;
         top: -5rem;
         &__rest{
-            @media (min-width: 1366px) {
+            @media (min-width: 1300px) {
                 grid-column: 1;
                 grid-row: 1;                
             }
@@ -65,23 +65,27 @@ body{
             color: $colour-black;       
             display: flex;
             justify-content: space-between;
-            &__icon {                
-                padding: 0;
-                margin: 0;
-                position: absolute;
-                top: 1.5rem;
-                right: 0;
-                bottom: 0;
-            }
-            &__icon__like {
-                padding: 0;
-                margin: 0;                
-                color: $colour-secondary;
-                position: absolute;
-                top: 1.5rem;
-                right: 0;
-                bottom: 0;
-                @include like;                
+            &__container {
+                @include like;
+                &__like__off {                
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 0;
+                    bottom: 0;
+                }
+                &__like__on {
+                    opacity: 0;
+                    padding: 0;
+                    margin: 0;                
+                    color: $colour-secondary;
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 0;
+                    bottom: 0;
+                    //@include like;                
+                }                
             }
         }
         &__order{
@@ -186,7 +190,7 @@ body{
             }
         }
         &__wrapper {
-            @media (min-width: 1366px) {
+            @media (min-width: 1300px) {
                 grid-column: 2;
                 grid-row: 3;
             }
@@ -234,7 +238,7 @@ body{
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1300px) {
     .order__entrees {
         grid-column: 1;
         grid-row: 2;

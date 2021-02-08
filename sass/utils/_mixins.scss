@@ -16,10 +16,23 @@
 }
 
 @mixin like {
-    opacity: 0;
-    z-index: 1;
-    &:hover {
-        opacity: 1;         
-        transition: opacity 500ms;    
+    &:hover &__like__off {
+        opacity: 0;
+        z-index: -1;
+        transition: 700ms;
     }
+    &:hover &__like__on {
+        opacity: 1;         
+        //color: $colour-secondary;
+        transition: 700ms;
+    } 
 }
+
+// @mixin like {
+//     //opacity: 0;
+//     &:hover {
+//         //z-index: 10;
+//         opacity: 1;         
+//         transition: opacity 500ms;    
+//     }
+// }

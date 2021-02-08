@@ -16,7 +16,7 @@
       height: 1rem;
       width: 10rem;
       //border-radius: 1rem;
-      background-color: $colour-primary;
+      background: linear-gradient(to right, $colour-primary, $colour-secondary);
       animation: progress-bar 1500ms; 
       transform-origin: 0% 50%;     
       &Container {
