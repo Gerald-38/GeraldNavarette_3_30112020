@@ -22,17 +22,7 @@
         transition: 700ms;
     }
     &:hover &__like__on {
-        opacity: 1;         
-        //color: $colour-secondary;
+        opacity: 1;
         transition: 700ms;
     } 
 }
-
-// @mixin like {
-//     //opacity: 0;
-//     &:hover {
-//         //z-index: 10;
-//         opacity: 1;         
-//         transition: opacity 500ms;    
-//     }
-// }

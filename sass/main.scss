@@ -1,26 +1,23 @@
 @import "./utils/variables";
-// @import "./utils/functions";
+
 @import "./utils/mixins";
-// @import "./utils/extensions";
 
 @import "./layout/loader";
 
 @import "./base/base";
+
 @import "./base/typography";
 
 @import "./components/buttons";
 
 @import "./layout/header";
-// @import "./layout/nav";
-@import "./layout/container";
-// @import "./layout/form";
+
 @import "./layout/fonctionn";
+
 @import "./layout/restaurants";
+
 @import "./layout/footer";
 
 @import "./pages/index";
+
 @import "./pages/menu";
-// @import "./pages/alafrancaise";
-// @import "./pages/delicesens";
-// @import "./pages/noteenchantee";
-// @import "./pages/palettegout";

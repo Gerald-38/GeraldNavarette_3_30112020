@@ -2,7 +2,6 @@ body{
     color: $colour-black;
 }
 
-
 .headerMenu {
     position: relative;
     &__icon {
@@ -14,7 +13,6 @@ body{
         display:flex;
         align-items:center;
         justify-content:center;
-        //<transform: translateY(-50%);
         font-size: 1.2rem;
         color: black;
     }
@@ -22,9 +20,6 @@ body{
 
 .menu {    
     padding: 0 0 0 0;
-    &__wrapper {
-      // margin: 0 0 -5rem 0;
-    }  
     &__img { 
         @media (min-width: 1300px) {
             height: 30rem;
@@ -83,8 +78,7 @@ body{
                     position: absolute;
                     top: 1.5rem;
                     right: 0;
-                    bottom: 0;
-                    //@include like;                
+                    bottom: 0;          
                 }                
             }
         }
@@ -110,8 +104,6 @@ body{
                 box-shadow: 3px 5px 10px 1px $back-colour-dark;
                 overflow: hidden;
                 animation: 400ms types $anim-dur ease-in forwards;
-                //animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-                //animation-fill-mode: both;
                 @for $i from 1 through $num-types {
                     &--#{$i} {
                         animation-delay: $anim-delay * $i;
@@ -136,7 +128,6 @@ body{
                 }
                 }
                 &__validate {
-                    //display: none;
                     opacity: 0;
                     transition: transform 400ms ease-in-out;               
                     margin: 0rem -5rem 0rem 0rem;
@@ -145,8 +136,7 @@ body{
                     background-color: $colour-tertiary;
                     animation: 200ms validator $anim-dur ease-in forwards;
                     & i {
-                        color: $colour-white;
-                        //transition-duration: 300ms;                                                
+                        color: $colour-white;                                            
                         transition: transform 400ms ease-in-out;
                         font-size: 2rem;                      
                         position: relative;
@@ -156,9 +146,6 @@ body{
                 }   
                 &__card {
                     width: 100%;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
                     padding: 0px 0px 0px 0px;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -179,14 +166,9 @@ body{
                     font-weight: bold;                 
                     padding: 1.5rem 0rem 0rem 0rem; 
                     position: absolute;
-                    right: 1rem;
+                    right: 0.5rem;
                     transition: transform 300ms ease-in-out;
-                   // right : 1rem;                   
-                    //position: relative;
-                    //right: 0rem;
-                    //top: 1rem;
-                }        
-
+                }
             }
         }
         &__wrapper {
@@ -252,16 +234,3 @@ body{
         grid-row: 2;
     }
 }
-
-
-//  {
-//     transform: scaleX(0);
-//     opacity: .5;
-// }    
-
-// 100% {
-//     transform: scaleX(1);
-// }
-// }
-
-

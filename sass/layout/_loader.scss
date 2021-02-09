@@ -15,7 +15,6 @@
     &__bar {               
       height: 1rem;
       width: 10rem;
-      //border-radius: 1rem;
       background: linear-gradient(to right, $colour-primary, $colour-secondary);
       animation: progress-bar 1500ms; 
       transform-origin: 0% 50%;     
@@ -30,7 +29,7 @@
         text-align: center;
         margin-bottom: 6rem;        
         & p {
-            animation: text-zoom 1500ms;
+            animation: text-rotate 1500ms;
             font-family: 'Shrikhand', sans-serif;
             font-size: 2rem;
             color: $colour-black;
@@ -54,7 +53,7 @@
     }
 }
 
-@keyframes text-zoom {
+@keyframes text-rotate {
     0% {
         opacity: 0;
     }    

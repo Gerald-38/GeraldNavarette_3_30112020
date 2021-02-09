@@ -8,9 +8,6 @@ a {
 }
 
 .restaurants {
-    @media (min-width: 1300px) {
-        //text-align: center;
-    }
     color: $colour-black;
     background-color: $back-colour-clear;
     padding: 1rem 1rem 1rem 1rem;
@@ -20,17 +17,13 @@ a {
         }
     }    
     &__container {
-        //padding: 1rem 1rem 1rem 1rem;
         @media (min-width: 1300px) { 
             margin: 0 auto;
             width: 80%;
-            //display: flex;
-            //flex-wrap: wrap;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10px;
             grid-auto-rows: minmax(100px, auto);
-            //top: -4rem;
             .restaurants_link {
                 margin: 0 auto; 
                 width: 95%;                
@@ -53,13 +46,6 @@ a {
             }
         }
     }
-    & a {
-        
-        @media (min-width: 1300px) {
-            width: 36rem;
-            margin-bottom: 2rem;
-        }
-    }
     &_link:nth-child(2) {
         & .card {
             &__img {
@@ -78,8 +64,6 @@ a {
 
 }
 
-
-
 .card {   
     height: 300px;
     background-color: $colour-white;    
@@ -93,25 +77,17 @@ a {
         box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
     }   
     &__img {
-        // &:nth-of-type(2) {            
-        //     object-position: 90% 10% ;
-        //     object-fit: cover;
-        // } 
         margin: 0rem 0rem 0rem 0rem;
         padding: 0px;       
         width: 100%;
         height: 80%;
-        border-radius: 20px 20px 0px 0px;;
-        //@at-root: absolute;
+        border-radius: 20px 20px 0px 0px;
         object-position: 10% 90%;
         object-fit: cover;
     }
     &__label {
         color: $back-colour-darkest;
         padding: .5rem .5rem;
-        // position: relative;
-        // right: -16rem;
-        // top: -11rem;
         position: absolute;
         top: 1rem;
         right: 0.75rem;        
@@ -124,31 +100,11 @@ a {
         color: $colour-black;       
         display: flex;
         justify-content: space-between;
-        background-color: $colour-white;
-        &__content {
-            
-        }    
+        background-color: $colour-white; 
     }
-    // &__like {
-    //     &:hover {
-    //         color: $colour-secondary;
-    //     }
-    // }
     &__container {   
-        @include like;  
-        // &:hover &__like__off {
-        //     opacity: 0;
-        //     z-index: -1;
-        //     transition: 700ms;
-        // }
-        // &:hover &__like__on {
-        //     opacity: 1;         
-        //     color: $colour-secondary;
-        //     transition: 700ms;
-        // }   
-        &__like__off {
-        }
-         &__like__on {
+        @include like;
+        &__like__on {
             padding: 0;
             margin: 0;
             position: absolute;
@@ -163,11 +119,4 @@ a {
             // color:transparent;
         }
     }
-
 }
-
-// linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
-
-
-//color: linear-gradient(170deg, $colour-secondary-clear,$colour-primary-clear);
-

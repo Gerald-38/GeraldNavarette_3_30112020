@@ -9,7 +9,7 @@ $back-colour-clear:#F2F2F2;
 $back-colour-medium: darken($back-colour-clear, 5%);
 $back-colour-dark: darken($back-colour-clear, 10%);
 $back-colour-darkest: darken($back-colour-clear, 70%);
-$num-types: 9;
+$num-types: 10;
 $anim-dur: 1000ms;
 $anim-delay: $anim-dur / $num-types;
 

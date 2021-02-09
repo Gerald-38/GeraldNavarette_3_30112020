@@ -2,8 +2,6 @@
     @media (min-width: 1300px) {
         text-align: center;
     }
-    //margin: 1rem 1rem 4rem 1rem;
-    //padding: .1rem .5rem .1rem 1rem;      
     color: $colour-black;
     &__icon{
         margin: 0rem 2rem 0rem 0rem;
@@ -22,7 +20,7 @@
             padding: 2rem 1rem 2rem 1rem;            
             display: flex;        
             list-style-type: none;                        
-            counter-increment: compteur; /* on incrémente le compteur à chaque nouveau li */
+            counter-increment: compteur;
             background-color: $back-colour-clear;            
             box-shadow: 3px 5px 10px 1px $back-colour-dark;   
             border-radius: 20px;
@@ -31,15 +29,13 @@
                 & i {
                     color: $colour-primary;
                 }
-            }
-        
+            }        
             &:hover {
                 box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
             } 
             @media (min-width: 1300px) {
                 margin: 0 1rem 2rem 1rem;
-            }           
-
+            }
             &:before {
                 content: counter(compteur); 
                 background: $colour-primary;
@@ -54,18 +50,5 @@
                 right: 1.8rem;
             }               
         }
-    }    
-
+    }
 }
-
-// @media (min-width: 1300px) 
-// {
-//     .fonctionn__steps {
-//         display: flex;
-//         &__step {
-//             margin: 
-//         }
-//     }
-
-// }
-
