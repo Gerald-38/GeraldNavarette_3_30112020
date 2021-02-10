@@ -2,6 +2,7 @@
     @media (min-width: 1300px) {
         text-align: center;
     }
+    padding: .1rem .5rem .1rem 1rem;
     color: $colour-black;
     &__icon{
         margin: 0rem 2rem 0rem 0rem;
@@ -25,14 +26,14 @@
             box-shadow: 3px 5px 10px 1px $back-colour-dark;   
             border-radius: 20px;
             transition-duration: 500ms; 
+            &:hover {
+                box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
+            } 
             &:nth-child(3) {
                 & i {
                     color: $colour-primary;
                 }
-            }        
-            &:hover {
-                box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
-            } 
+            }
             @media (min-width: 1300px) {
                 margin: 0 1rem 2rem 1rem;
             }

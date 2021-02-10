@@ -6,12 +6,18 @@
   top: 0;
   background-color: rgba(223, 197, 197, 0.9);
   animation: loader 2000ms;
-  animation-delay: 2000ms;
+  animation-delay: 1000ms;
   animation-fill-mode: both;
-  z-index: 10000;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.loader__barContainer {
+  border: 1px solid black;
+  display: flex;
+  width: 10rem;
+  justify-content: space-between;
 }
 .loader__bar {
   height: 1rem;
@@ -19,12 +25,6 @@
   background: linear-gradient(to right, #9356DC, #FF79DA);
   animation: progress-bar 1500ms;
   transform-origin: 0% 50%;
-}
-.loader__barContainer {
-  border: 1px solid black;
-  display: flex;
-  width: 10rem;
-  justify-content: space-between;
 }
 .loader__text {
   text-align: center;
@@ -40,7 +40,7 @@
 @keyframes loader {
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: -100;
   }
 }
 @keyframes progress-bar {
@@ -125,6 +125,7 @@ button {
 }
 
 .fonctionn {
+  padding: 0.1rem 0.5rem 0.1rem 1rem;
   color: #000;
 }
 @media (min-width: 1300px) {
@@ -158,11 +159,11 @@ button {
   border-radius: 20px;
   transition-duration: 500ms;
 }
-.fonctionn__steps__step:nth-child(3) i {
-  color: #9356DC;
-}
 .fonctionn__steps__step:hover {
   box-shadow: 3px 5px 10px 1px #404040;
+}
+.fonctionn__steps__step:nth-child(3) i {
+  color: #9356DC;
 }
 @media (min-width: 1300px) {
   .fonctionn__steps__step {
@@ -475,7 +476,7 @@ body {
   padding: 0rem 0rem 0rem 1rem;
   box-shadow: 3px 5px 10px 1px #d9d9d9;
   overflow: hidden;
-  animation: 400ms types 1000ms ease-in forwards;
+  animation: 400ms appear 1000ms ease-in forwards;
 }
 .menu__content__order__type--1 {
   animation-delay: 100ms;
@@ -734,7 +735,23 @@ body {
   width: 50%;
 }
 
-@keyframes types {
+@media (min-width: 1300px) {
+  .order__entrees {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .order__plats {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .order__desserts {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+@keyframes appear {
   0% {
     opacity: 0;
     transform: scale(0.3);
@@ -758,22 +775,6 @@ body {
   100% {
     width: 5rem;
     opacity: 1;
-  }
-}
-@media (min-width: 1300px) {
-  .order__entrees {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .order__plats {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .order__desserts {
-    grid-column: 3;
-    grid-row: 2;
   }
 }
 

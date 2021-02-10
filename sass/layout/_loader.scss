@@ -6,24 +6,24 @@
     top: 0;
     background-color: rgba(223, 197, 197, 0.9);
     animation: loader 2000ms;
-    animation-delay: 2000ms;
+    animation-delay: 1000ms;
     animation-fill-mode: both;
-    z-index: 10000;
+    z-index: 100;
     display:flex;
     align-items:center;
     justify-content:center;  
+    &__barContainer {
+        border: 1px solid black;
+        display: flex;
+        width: 10rem;
+        justify-content: space-between;
+      }   
     &__bar {               
       height: 1rem;
       width: 10rem;
       background: linear-gradient(to right, $colour-primary, $colour-secondary);
       animation: progress-bar 1500ms; 
-      transform-origin: 0% 50%;     
-      &Container {
-        border: 1px solid black;
-        display: flex;
-        width: 10rem;
-        justify-content: space-between;
-      }      
+      transform-origin: 0% 50%;    
     }
     &__text {      
         text-align: center;
@@ -40,7 +40,7 @@
 @keyframes loader{
     100% { 
         opacity: 0; 
-        z-index: -10;
+        z-index: -100;
     }
 }
   
@@ -61,6 +61,7 @@
     50%{
         transform: rotate(360deg);
     }
+
     100% {
         transform: rotate(360deg);
     }

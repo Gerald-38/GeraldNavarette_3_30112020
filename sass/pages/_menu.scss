@@ -103,7 +103,7 @@ body{
                 padding: 0rem 0rem 0rem 1rem;
                 box-shadow: 3px 5px 10px 1px $back-colour-dark;
                 overflow: hidden;
-                animation: 400ms types $anim-dur ease-in forwards;
+                animation: 400ms appear $anim-dur ease-in forwards;
                 @for $i from 1 through $num-types {
                     &--#{$i} {
                         animation-delay: $anim-delay * $i;
@@ -187,7 +187,22 @@ body{
     
 }
 
-@keyframes types {
+@media (min-width: 1300px) {
+    .order__entrees {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .order__plats {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .order__desserts {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+@keyframes appear {
     0% {
         opacity: 0;
         transform: scale(0.3);
@@ -220,17 +235,4 @@ body{
     }
 }
 
-@media (min-width: 1300px) {
-    .order__entrees {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    .order__plats {
-        grid-column: 2;
-        grid-row: 2;
-    }
-    .order__desserts {
-        grid-column: 3;
-        grid-row: 2;
-    }
-}
+
