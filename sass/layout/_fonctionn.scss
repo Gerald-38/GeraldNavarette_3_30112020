@@ -25,10 +25,6 @@
             background-color: $back-colour-clear;            
             box-shadow: 3px 5px 10px 1px $back-colour-dark;   
             border-radius: 20px;
-            transition-duration: 500ms; 
-            &:hover {
-                box-shadow: 3px 5px 10px 1px $back-colour-darkest; 
-            } 
             &:nth-child(3) {
                 & i {
                     color: $colour-primary;

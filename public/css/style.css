@@ -157,10 +157,6 @@ button {
   background-color: #F2F2F2;
   box-shadow: 3px 5px 10px 1px #d9d9d9;
   border-radius: 20px;
-  transition-duration: 500ms;
-}
-.fonctionn__steps__step:hover {
-  box-shadow: 3px 5px 10px 1px #404040;
 }
 .fonctionn__steps__step:nth-child(3) i {
   color: #9356DC;
